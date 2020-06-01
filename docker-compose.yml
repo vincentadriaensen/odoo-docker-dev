@@ -1,0 +1,15 @@
+version: '2'
+services:
+  ubuntu:
+    image: ubuntu:16.04
+    ports:
+      - "8069:8069"
+    tty: true
+    volumes:
+      - ./odoo:/odoo/odoo-server
+      - ./enterprise:/odoo/enterprise
+      - ./custom-addons:/odoo/custom-addons
+      - ./odoo_etc:/etc/odoo
+volumes:
+  ubuntu:
+  
